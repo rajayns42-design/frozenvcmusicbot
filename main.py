@@ -66,7 +66,7 @@ API_ID = int(os.environ.get("API_ID"))
 API_HASH = os.environ.get("API_HASH")
 BOT_TOKEN = os.environ.get("BOT_TOKEN")
 ASSISTANT_SESSION = os.environ.get("ASSISTANT_SESSION")
-OWNER_ID = int(os.getenv("OWNER_ID", "5268762773"))
+OWNER_ID = int(os.getenv("OWNER_ID", "8315627692"))
 
 
 logging.getLogger("pyrogram").setLevel(logging.ERROR)
@@ -317,8 +317,8 @@ async def fetch_youtube_link_backup(query):
     except Exception as e:
         raise Exception(f"Backup Search API error: {e}")
     
-BOT_NAME = os.environ.get("BOT_NAME", "Frozen Music")
-BOT_LINK = os.environ.get("BOT_LINK", "https://t.me/vcmusiclubot")
+BOT_NAME = os.environ.get("BOT_NAME", "Anu Music")
+BOT_LINK = os.environ.get("BOT_LINK", "https://t.me/Anu_QTbot")
 
 from pyrogram.errors import UserAlreadyParticipant, RPCError
 
@@ -369,17 +369,17 @@ async def start_handler(_, message):
     styled_name = to_bold_unicode(raw_name)
     user_link = f"[{styled_name}](tg://user?id={user_id})"
 
-    add_me_text = to_bold_unicode("Add Me")
-    updates_text = to_bold_unicode("Updates")
-    support_text = to_bold_unicode("Support")
-    help_text = to_bold_unicode("Help")
+    add_me_text = to_bold_unicode("𝐀ᴅᴅ 𝐌ᴇ 𝐁ᴀʙʏ")
+    updates_text = to_bold_unicode("𝐔ᴩᴅᴀᴛᴇꜱ")
+    support_text = to_bold_unicode("𝐒ᴜᴩᴩᴏʀᴛ")
+    help_text = to_bold_unicode("𝐇ᴇʟᴩ")
 
     
-    updates_channel = os.getenv("UPDATES_CHANNEL", "https://t.me/vibeshiftbots")
-    support_group = os.getenv("SUPPORT_GROUP", "https://t.me/Frozensupport1")
+    updates_channel = os.getenv("UPDATES_CHANNEL", "https://t.me/ABOUT_ROLEX_ANU")
+    support_group = os.getenv("SUPPORT_GROUP", "https://t.me/+24Qsi2MkpSs3MmRk")
     start_animation = os.getenv(
         "START_ANIMATION",
-        "https://frozen-imageapi.lagendplayersyt.workers.dev/file/2e483e17-05cb-45e2-b166-1ea476ce9521.mp4"
+        "https://ibb.co/Z6LTryqQ"
     )
 
     caption = (
@@ -437,8 +437,8 @@ async def go_back_callback(_, callback_query):
     support_text = to_bold_unicode("Support")
     help_text = to_bold_unicode("Help")
 
-    updates_channel = os.getenv("UPDATES_CHANNEL", "https://t.me/vibeshiftbots")
-    support_group = os.getenv("SUPPORT_GROUP", "https://t.me/Frozensupport1")
+    updates_channel = os.getenv("UPDATES_CHANNEL", "https://t.me/ABOUT_ROLEX_ANU")
+    support_group = os.getenv("SUPPORT_GROUP", "https://t.me/+24Qsi2MkpSs3MmRk")
 
     caption = (
         f"👋 нєу {user_link} 💠, 🥀\n\n"
@@ -893,7 +893,7 @@ async def update_progress_caption(
 
 
 
-LOG_CHAT_ID = "@frozenmusiclogs"
+LOG_CHAT_ID = "-1003674824626"
 
 async def fallback_local_playback(chat_id: int, message: Message, song_info: dict):
     playback_mode[chat_id] = "local"
@@ -931,7 +931,7 @@ async def fallback_local_playback(chat_id: int, message: Message, song_info: dic
         one_line = _one_line_title(song_info["title"])
         base_caption = (
             "<blockquote>"
-            "<b>🎧 Frozen ✘ Music Streaming</b> (Local Playback)\n\n"
+            "<b>🎧 Anu ✘ Music Streaming</b> (Playback)\n\n"
             f"❍ <b>Title:</b> {one_line}\n"
             f"❍ <b>Requested by:</b> {song_info['requester']}"
             "</blockquote>"
@@ -1449,7 +1449,7 @@ def load_state_from_db():
 
 logger = logging.getLogger(__name__)
 
-RESTART_CHANNEL_ID = -1001849376366  
+RESTART_CHANNEL_ID = -1003674824626  
 
 
 async def connection_watchdog():
@@ -1466,7 +1466,7 @@ async def connection_watchdog():
     """
     
     CHECK_INTERVAL = 15.0       
-    STALE_SECONDS = 60.0        
+    STALE_SECONDS = 10.0        
     DEQUE_MAXLEN = 2000         
     PRUNE_THRESHOLD = STALE_SECONDS * 3  
 
