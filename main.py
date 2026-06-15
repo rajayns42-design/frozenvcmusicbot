@@ -317,8 +317,8 @@ async def fetch_youtube_link_backup(query):
     except Exception as e:
         raise Exception(f"Backup Search API error: {e}")
     
-BOT_NAME = os.environ.get("BOT_NAME", "Frozen Music")
-BOT_LINK = os.environ.get("BOT_LINK", "https://t.me/vcmusiclubot")
+BOT_NAME = os.environ.get("BOT_NAME", "Anu Music")
+BOT_LINK = os.environ.get("BOT_LINK", "https://t.me/Anu_QTbot")
 
 from pyrogram.errors import UserAlreadyParticipant, RPCError
 
@@ -727,14 +727,14 @@ async def process_play_command(message: Message, query: str):
         video_url, title, duration_iso, thumb = result
         if not video_url:
             await processing_message.edit(
-                "❌ Could not find the song. Try another query.\nSupport: @frozensupport1"
+                "❌ Could not find the song. Try another query.\nSupport: @ABOUT_ROLEX_ANU"
             )
             return
 
         secs = isodate.parse_duration(duration_iso).total_seconds()
         if secs > MAX_DURATION_SECONDS:
             await processing_message.edit(
-                "❌ Streams longer than 8 min are not allowed. If u are the owner of this bot contact @xyz09723 to upgrade your plan"
+                "❌ Streams longer than 8 min are not allowed. If u are the owner of this bot contact @ll_ROLLEX_X_ANU_ll to upgrade your plan"
             )
             return
 
@@ -893,7 +893,7 @@ async def update_progress_caption(
 
 
 
-LOG_CHAT_ID = "@frozenmusiclogs"
+LOG_CHAT_ID = "@anumusicgrup"
 
 async def fallback_local_playback(chat_id: int, message: Message, song_info: dict):
     playback_mode[chat_id] = "local"
@@ -931,7 +931,7 @@ async def fallback_local_playback(chat_id: int, message: Message, song_info: dic
         one_line = _one_line_title(song_info["title"])
         base_caption = (
             "<blockquote>"
-            "<b>🎧 Frozen ✘ Music Streaming</b> (Local Playback)\n\n"
+            "<b>🎧 ANU ✘ Music Streaming</b> (Anu Playback)\n\n"
             f"❍ <b>Title:</b> {one_line}\n"
             f"❍ <b>Requested by:</b> {song_info['requester']}"
             "</blockquote>"
@@ -978,7 +978,7 @@ async def fallback_local_playback(chat_id: int, message: Message, song_info: dic
                 f"• Title: {song_info.get('title','Unknown')}\n"
                 f"• Duration: {song_info.get('duration','Unknown')}\n"
                 f"• Requested by: {song_info.get('requester','Unknown')}\n"
-                f"• Mode: local"
+                f"• Mode: Anu"
             )
         )
 
@@ -1337,7 +1337,7 @@ async def ping_handler(_, message):
         
         response = (
             f"🏓 **Pong!**\n\n"
-            f"**Local Server Stats:**\n"
+            f"**Anu Server Stats:**\n"
             f"• **Uptime:** `{uptime_str}`\n"
             f"• **CPU Usage:** `{cpu_usage}%`\n"
             f"• **RAM Usage:** `{ram_usage}`\n"
@@ -1449,7 +1449,7 @@ def load_state_from_db():
 
 logger = logging.getLogger(__name__)
 
-RESTART_CHANNEL_ID = -1001849376366  
+RESTART_CHANNEL_ID = -1003674824626  
 
 
 async def connection_watchdog():
